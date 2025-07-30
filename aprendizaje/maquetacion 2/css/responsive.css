@@ -1,0 +1,93 @@
+/*TABLETS*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrap {
+        width: 100%;
+        margin: 0px auto;
+
+    }
+
+    .wrap2 {
+        width: 100%;
+        margin: 0px auto;
+
+    }
+
+    #banner {
+        text-align: center;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .buttons input[type="submit"],
+    .buttons input[type="reset"] {
+        width: 60%;
+        height: 35px;
+
+    }
+
+    .links {
+        text-align: center;
+    }
+
+    .social {
+        width: 100%;
+    }
+
+    .sponsors {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .menufooter,
+    .ubicacion,
+    .infofooter {
+        width: 90%;
+        align-items: center;
+    }
+
+    .menufooter nav {
+        padding-left: 0;
+    }
+
+    .menufooter ul {
+        padding: 0;
+        text-align: center;
+        list-style: none;
+    }
+
+    .menufooter li {
+    width: 100%;
+}
+
+    .menufooter li:hover {
+        list-style: none;
+    }
+
+    .ubicacion iframe {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+    .logos {
+        gap: 30px;
+    }
+
+    .infofooter h3,
+    .infofooter a {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,742 @@
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*FUENTES*/
+
+@font-face {
+    font-family: "bebas";
+    src: url(fonts/BebasNeue.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "symbols";
+    src: url(fonts/websymbols-regular-webfont.woff) format("woff"),
+        url(fonts/websymbols-regular-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*ESTILOS GENERALES*/
+
+.gear,
+.icon,
+.icon2 {
+    font-family: "symbols";
+}
+
+
+
+/*BODY*/
+
+body {
+    background-image: url(../imagenes/pattern.png);
+}
+
+/*HEADER*/
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: black;
+    font-family: "bebas";
+    color: white;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 5px 0px 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #37bcf9;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+#logo:hover {
+    border-radius: 2px;
+    color: black;
+    background-color: white;
+}
+
+#logo h3 {
+    font-size: 40px;
+}
+
+#logo:hover h3 {
+    animation: fromX 0.5s ease-in-out;
+}
+
+#logo .gear {
+    font-size: 30px;
+    margin-top: -5px;
+    animation: rotate-gear 2s linear infinite;
+}
+
+#logo:hover .gear {
+    animation: fromY 0.5s ease-in-out;
+}
+
+.wrap nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.wrap ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    list-style: none;
+
+}
+
+.wrap li {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.wrap a {
+    display: block;
+    color: white;
+    transition: all 0.2s;
+}
+
+.wrap a:hover {
+    color: #37bcf9;
+    transform: scale(1.2);
+}
+
+/*BANNER*/
+
+.wrap2 {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0px auto;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background-image: url(../imagenes/bakbaner.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 20px auto;
+    border-radius: 5px;
+    animation: backBanner 8s linear;
+    overflow: hidden;
+}
+
+.banner h1 {
+    font-family: "bebas";
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: normal;
+    animation: showText 8s linear;
+}
+
+/*CARDS*/
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 30px 
+}
+
+.card {
+    display: block;
+    width: 18%;
+    height: 305px;
+    padding: 10px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 1px 1px 2px #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: black;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+}
+
+.card:hover .icon {
+    font-size: 70px;
+    color: #37bcf9;
+    animation: iconY 0.7s linear;
+}
+
+.card h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: #00538C;
+}
+
+.card:hover h2 {
+    color: white;
+    animation: titleY 1s linear;
+}
+
+.description {
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0369ad;
+    font-size: 15px;
+}
+
+.card:hover .description {
+    color: white;
+    animation: descriptionX 1s linear;
+}
+
+/*MAIN*/
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+    padding: 0 20px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+/*ARTICLES*/
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    gap: 10px;
+}
+
+.articles>h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    background: url(../imagenes/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    font-family: "bebas";
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+article {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.data {
+    width: 28%;
+    height: 25px;
+    padding: 5px 2px;
+    border-radius: 0px 0px 0px 5px;
+    background-color: #393D3F;
+    color: white
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encabezado h3 {
+    padding: 10px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 23px;
+}
+
+.encabezado h3 a {
+    color: #00538C;
+    transition: all 0.3s;
+}
+
+.encabezado>h3>a:hover {
+    color: #37bcf9;
+}
+
+article p {
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+article p a {
+    color: #00538C;
+    transition: all 0.3s;
+}
+
+article p a:hover {
+    color: #2f78bc;
+    text-decoration: underline;
+}
+
+/*BLOG*/
+
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.blog:hover {
+    box-shadow: 0px 0px 5px #37bcf9, 0px 0px 10px #37bcf9, 0px 0px 20px #37bcf9;
+    animation: blink 5s linear infinite;  
+}
+
+.blog h2 {
+    font-family: "bebas";
+    font-size: 40px;
+}
+
+.blog a {
+    color: #00538C;
+    transition: all 0.5s;
+}
+
+.blog a:hover {
+    color: #37bcf9;
+}
+
+/*ASIDE*/
+
+.barralateral {
+    width: 26%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.barralateral section h3 {
+    width: auto;
+    background: url(../imagenes/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    font-size: 25px;
+    font-family: "bebas";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/*SEARCH*/
+
+.search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search input[type="text"] {
+    width: 80%;
+    height: 30px;
+    padding: 10px 25px 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 2px 2px 2px #ccc, 2px 1px 2px #ccc;
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.search input[type="text"]:focus {
+    color: black;
+    box-shadow: inset 0px 0px 5px #37bcf9;
+}
+
+.search button[type="submit"] {
+    position: absolute;
+    width: 10%;
+    right: 10%;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    transition: all 0.3s;
+}
+
+.search button:hover {
+    color: #37bcf9
+}
+
+/*LOGIN*/
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    gap: 20px;
+    box-shadow: 2px 2px 2px #ccc, -2px 4px 2px #ccc;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input-group input[type="email"] {
+    width: 90%;
+    height: 30px;
+    padding: 10px 10px 10px 25px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: -1px -2px 0px #ccc;
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.input-group input[type="email"]:focus {
+    color: black;
+    box-shadow: inset 0px 0px 5px #37bcf9;
+}
+
+.input-group input[type="password"] {
+    width: 90%;
+    height: 30px;
+    padding: 10px 10px 10px 25px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: -1px -2px 0px #ccc;
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.input-group input[type="password"]:focus {
+    color: black;
+    box-shadow: inset 0px 0px 5px #37bcf9;
+}
+
+.input-group label {
+    position: absolute;
+    width: 10%;
+    left: 8%;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+
+.input-group:focus-within label {
+    color: #37bcf9;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttons input[type="submit"],
+.buttons input[type="reset"] {
+    width: 35%;
+    height: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+    color: white;
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.buttons input[type="submit"]:hover,
+.buttons input[type="reset"]:hover {
+    background: linear-gradient(to bottom, #00538C 0%, #0369ad 100%);
+    box-shadow: 0px 0px 3px gray;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    color: black;
+    transition: all 0.3s;
+}
+
+.links a:hover {
+    color: #2f78bc;
+    text-decoration: underline;
+}
+
+/*SOCIAL*/
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 60%;
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    gap: 20px;
+    box-shadow: 2px 2px 2px #ccc, -2px 4px 2px #ccc;
+    overflow: hidden;
+}
+
+.social .redes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social .overlay {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px grey;
+    transform: translateX(-25%);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.social .icon2:hover+.overlay {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+/*SPONSORS*/
+
+.sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    gap: 20px;
+    box-shadow: 2px 2px 2px #ccc, -2px 4px 2px #ccc;
+    transition: transform 5s ease;
+}
+
+.sponsors img:hover {
+    transform: scale(1.2);
+}
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 70px;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: black;
+}
+
+/*MENU FOOTER*/
+.menufooter {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+}
+
+.menufooter h2 {
+    width: 100%;
+    background: url(../imagenes/pxgray.png), white;
+    font-size: 33px;
+    font-family: "bebas";
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menufooter nav {
+    padding-left: 20px;
+
+}
+
+.menufooter ul {
+
+    list-style: disc;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.menufooter li {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    width: 85%;
+    color: white;
+    transition: all 0.3s;
+}
+
+.menufooter li:hover {
+    color: #37bcf9;
+    border-bottom: 1px solid #37bcf9;
+    list-style: circle;
+}
+
+.menufooter a {
+    color: white;
+    transition: all 0.3s;
+}
+
+.menufooter a:hover {
+    color: #37bcf9;
+    padding-left: 15px;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+}
+
+.ubicacion h2 {
+    width: 100%;
+    background: url(../imagenes/pxgray.png), white;
+    font-size: 33px;
+    font-family: "bebas";
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ubicacion iframe {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.infofooter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 17%;
+}
+
+.infofooter>h2 {
+    width: 100%;
+    background: url(../imagenes/pxgray.png), white;
+    font-size: 33px;
+    font-family: "bebas";
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infofooter h3,
+.infofooter a {
+    margin: 0px auto;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: normal;
+    transition: all 0.3s;
+}
+
+.infofooter a:hover {
+    color: #37bcf9;
+    text-decoration: underline;
+}
+
+.infofooter img {
+    margin: 0px auto;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+}
