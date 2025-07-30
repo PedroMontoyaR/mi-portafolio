@@ -1,53 +1,409 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenido a mi portafolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      line-height: 1.6;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-    h1 {
-      color: #70B231;
-      text-align: center;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin: 10px 0;
-    }
-    a {
-      color: #70B231;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master en CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="css/Imagenes/logo.png">
 </head>
+
 <body>
-  <h1>Hola, soy Pedro Montoya 👨‍💻</h1>
-  <p>Bienvenido a mi portafolio web. Puedes navegar por las siguientes secciones:</p>
-  <ul>
-    <li><a href="aprendizaje" target="_blank">Proyectos de Aprendizaje</a></li>
-    <li><a href="proyectos" target="_blank">Proyectos Personales</a></li>
-    <li><a href="trabajo" target="_blank">Trabajos Profesionales</a></li>
-  </ul>
-  <footer>
-    Hecho con ❤️ por y para Martín 👶
-  </footer>
+
+    <header>
+
+        <img src="css/Imagenes/logo.png" alt="logo de la pagina" title="logo css3" width="150">
+        <h1><a href="index.html">MASTER EN CSS</a></h1>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Contenido</a></li>
+            <li><a href="#">Requerimientos</a></li>
+            <li>
+                <a href="#">Lenguajes</a>
+                <ul>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Frameworks</a>
+                <ul>
+                    <li><a href="#">LESS</a></li>
+                    <li><a href="#">SASS</a></li>
+                    <li><a href="#">BOOSTRAP</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Proyectos</a> </li>
+            <li><a href="#">El instructor</a></li>
+            <li><a href="#">Reseñas</a> </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+
+        </ul>
+
+
+    </nav>
+
+    <main>
+
+        <div class="barralateral">
+            <aside>
+
+                <div>
+
+                    <h3>Entrar a la web</h3>
+
+                    <form>
+                        <label for="usuario1">Usuario:</label>
+                        <input type="text" id="usuario1" name="usuario">
+
+                        <label for="contraseña1">Contraseña:</label>
+                        <input type="password" id="contraseña1" name="contraseña">
+
+                        <input type="submit" id="enviarformualario" name="accion" value="Enviar">
+
+                    </form>
+
+                    <a href="#">Zona de Alumnos</a>
+                    <a href="#">Zona del Profesor</a>
+                    <a href="#">Acceso a calificaciones</a>
+
+                </div>
+
+                <div>
+
+                    <h3 class="red">Aula virtual 1</h3>
+
+                    <form>
+                        <label for="usuario2">Nombre de usuario:</label>
+                        <input type="text" id="usuario2" name="usuario">
+
+                        <label for="contraseña2">Contraseña:</label>
+                        <input type="password" id="contraseña2" name="contraseña">
+
+                        <input type="submit" id="enviarformualario2" name="accion" value="Enviar">
+
+                    </form>
+
+                </div>
+
+                <div>
+
+                    <h3 class="blue">Aula virtual 2</h3>
+
+                    <form>
+                        <label for="usuario3">Nombre de usuario:</label>
+                        <input type="text" id="usuario3" name="usuario">
+
+                        <label for="contraseña3">Contraseña:</label>
+                        <input type="password" id="contraseña3" name="contraseña">
+
+                        <input type="submit" id="enviarformualario3" name="accion" value="Enviar">
+
+                    </form>
+
+                </div>
+
+                <div>
+
+                    <h3>Enlaces de interes</h3>
+
+                    <ul>
+                        <li><a href="#">Master en JavaScript</a></li>
+                        <li><a href="#">Master en PHP</a></li>
+                        <li><a href="#">Master en Frameworks JS</a></li>
+                        <li><a href="#">Master en webs full-stack</a></li>
+                        <li><a href="#">victorroblesweb.es</a></li>
+                    </ul>
+
+                </div>
+
+            </aside>
+
+            <aside id="frase">
+
+                <p><em>"¡Yo voy a mi destino y voy a ganar!"</em></p>
+                <a href="#">Leer mas frases</a>
+
+            </aside>
+
+        </div>
+
+        <div class="noticias">
+
+            <section>
+
+                <span class="stickers">
+
+                    <img class="sticker1" src="css/Imagenes/scotch.png" alt="pegatina">
+                    <img class="sticker2" src="css/Imagenes/scotch.png" alt="pegatina">
+
+                </span>
+
+                <h2>Noticias de Front-end</h2>
+
+                <article>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Descripción general</a>
+
+                        El desarrollo frontend requiere mucho más que escribir código. Al igual que otros aspectos de la
+                        tecnología, los objetivos del desarrollo frontend han cambiado en la última década. En este
+                        tema, analizamos el desarrollo frontend y sus beneficios, los desafíos que enfrentan los
+                        desarrolladores y las nuevas tendencias que The New Stack observa en el desarrollo de software.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">¿Qué es el desarrollo frontend?</a>
+
+                        El desarrollo frontend, también conocido como desarrollo del lado del cliente, es la
+                        implementación de la visión y el concepto de diseño de páginas web o aplicaciones a través del
+                        código.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">¿Qué hace un desarrollador frontend?</a>
+
+                        Todos los desarrolladores deben saber gestionar datos. Abarcamos todo, desde API y bases de
+                        datos hasta el nuevo paradigma del almacenamiento descentralizado en la Web3. El aprendizaje
+                        automático
+                        también es cada vez más importante para los desarrolladores, en particular con el lenguaje de
+                        programación Python.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Lenguajes de programación para desarrolladores frontend</a>
+
+                        Para desarrollar secciones del software orientadas al cliente, un desarrollador debe estar
+                        familiarizado con estos tres lenguajes principales: HTML5, CSS3 y JavaScript.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#"> El auge de las soluciones de bajo código</a>
+
+                        El low-code se está convirtiendo rápidamente en un método viable para crear aplicaciones para
+                        empresas y gobiernos. Analizamos el impacto del low-code y la programación visual en general en
+                        la industria del desarrollo frontend.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                </article>
+
+            </section>
+
+
+            <section>
+
+                <img class="sticker1" src="css/Imagenes/scotch.png" alt="pegatina">
+                <img class="sticker2" src="css/Imagenes/scotch.png" alt="pegatina">
+
+                <h2 class="red2">Noticias de Back-end</h2>
+
+                <article>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        Nullam consequat dictum dignissim. Pellentesque habitant morbi tristique senectus et netus et
+                        malesuada fames ac turpis egestas. Vestibulum ut sagittis risus. Sed pulvinar leo ac posuere
+                        luctus. Sed molestie tortor non nulla consectetur sollicitudin. Integer vel ex ullamcorper,
+                        iaculis est sit amet, varius odio. Donec id orci eget purus laoreet pellentesque. Ut in mi dui.
+                        Etiam at sapien semper, pellentesque odio at, facilisis ante. Integer at euismod velit. Maecenas
+                        nunc quam, dignissim id lacinia id, tincidunt tristique ligula. Praesent suscipit ultrices mi.
+                        Curabitur quis placerat velit, sit amet iaculis elit.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        Nullam consequat dictum dignissim. Pellentesque habitant morbi tristique senectus et netus et
+                        malesuada fames ac turpis egestas. Vestibulum ut sagittis risus. Sed pulvinar leo ac posuere
+                        luctus. Sed molestie tortor non nulla consectetur sollicitudin. Integer vel ex ullamcorper,
+                        iaculis est sit amet, varius odio. Donec id orci eget purus laoreet pellentesque. Ut in mi dui.
+                        Etiam at sapien semper, pellentesque odio at, facilisis ante. Integer at euismod velit. Maecenas
+                        nunc quam, dignissim id lacinia id, tincidunt tristique ligula. Praesent suscipit ultrices mi.
+                        Curabitur quis placerat velit, sit amet iaculis elit.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        In pharetra eu felis eget pharetra. Sed viverra maximus nibh quis interdum. Aenean suscipit,
+                        diam at porttitor consequat, enim erat commodo augue, eu ullamcorper urna felis vel nulla.
+                        Aenean vel tincidunt odio. Vivamus tristique tortor in diam volutpat, non semper mauris euismod.
+                        Pellentesque quam arcu, sodales et sapien a, interdum accumsan turpis. Etiam malesuada augue vel
+                        aliquet sagittis. Praesent in interdum ligula, eget suscipit dui. Aenean placerat ligula mi,
+                        rhoncus faucibus urna mattis ac. Curabitur dolor eros, pellentesque vel euismod luctus, iaculis
+                        ac eros. Mauris posuere est ex.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        Fusce euismod venenatis auctor. Vestibulum felis dui, pulvinar non aliquam a, dapibus non nisi.
+                        Aenean non viverra lacus. Donec posuere sem sem, at lacinia arcu placerat in. Maecenas sit amet
+                        scelerisque diam, in sagittis quam. Praesent vel ultricies ipsum. Sed ut posuere lectus. Sed ac
+                        sagittis risus. Cras suscipit dui justo, in tincidunt ligula congue sit amet. Donec massa purus,
+                        condimentum sit amet tempor non, molestie vitae mi. Nam nec neque auctor, pellentesque risus a,
+                        molestie erat. Aenean lacinia libero eu lorem cursus lobortis.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                </article>
+
+
+            </section>
+
+            <section>
+
+                <img class="sticker1" src="css/Imagenes/scotch.png" alt="pegatina">
+                <img class="sticker2" src="css/Imagenes/scotch.png" alt="pegatina">
+
+                <h2 class="yellow">Noticias del instructor</h2>
+
+                <article>
+
+                    <span class="icon">a</span>
+
+                    <p>
+                        <a href="#">Titulo de la entrada</a>
+
+                        Nullam consequat dictum dignissim. Pellentesque habitant morbi tristique senectus et netus et
+                        malesuada fames ac turpis egestas. Vestibulum ut sagittis risus. Sed pulvinar leo ac posuere
+                        luctus. Sed molestie tortor non nulla consectetur sollicitudin. Integer vel ex ullamcorper,
+                        iaculis est sit amet, varius odio. Donec id orci eget purus laoreet pellentesque. Ut in mi dui.
+                        Etiam at sapien semper, pellentesque odio at, facilisis ante. Integer at euismod velit. Maecenas
+                        nunc quam, dignissim id lacinia id, tincidunt tristique ligula. Praesent suscipit ultrices mi.
+                        Curabitur quis placerat velit, sit amet iaculis elit.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        Nullam consequat dictum dignissim. Pellentesque habitant morbi tristique senectus et netus et
+                        malesuada fames ac turpis egestas. Vestibulum ut sagittis risus. Sed pulvinar leo ac posuere
+                        luctus. Sed molestie tortor non nulla consectetur sollicitudin. Integer vel ex ullamcorper,
+                        iaculis est sit amet, varius odio. Donec id orci eget purus laoreet pellentesque. Ut in mi dui.
+                        Etiam at sapien semper, pellentesque odio at, facilisis ante. Integer at euismod velit. Maecenas
+                        nunc quam, dignissim id lacinia id, tincidunt tristique ligula. Praesent suscipit ultrices mi.
+                        Curabitur quis placerat velit, sit amet iaculis elit.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        In pharetra eu felis eget pharetra. Sed viverra maximus nibh quis interdum. Aenean suscipit,
+                        diam at porttitor consequat, enim erat commodo augue, eu ullamcorper urna felis vel nulla.
+                        Aenean vel tincidunt odio. Vivamus tristique tortor in diam volutpat, non semper mauris euismod.
+                        Pellentesque quam arcu, sodales et sapien a, interdum accumsan turpis. Etiam malesuada augue vel
+                        aliquet sagittis. Praesent in interdum ligula, eget suscipit dui. Aenean placerat ligula mi,
+                        rhoncus faucibus urna mattis ac. Curabitur dolor eros, pellentesque vel euismod luctus, iaculis
+                        ac eros. Mauris posuere est ex.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                    <span class="icon">a</span>
+
+                    <p>
+
+                        <a href="#">Titulo de la entrada</a>
+
+                        Fusce euismod venenatis auctor. Vestibulum felis dui, pulvinar non aliquam a, dapibus non nisi.
+                        Aenean non viverra lacus. Donec posuere sem sem, at lacinia arcu placerat in. Maecenas sit amet
+                        scelerisque diam, in sagittis quam. Praesent vel ultricies ipsum. Sed ut posuere lectus. Sed ac
+                        sagittis risus. Cras suscipit dui justo, in tincidunt ligula congue sit amet. Donec massa purus,
+                        condimentum sit amet tempor non, molestie vitae mi. Nam nec neque auctor, pellentesque risus a,
+                        molestie erat. Aenean lacinia libero eu lorem cursus lobortis.
+                        <br><span>[20-04-2025. Martín Montoya]</span>
+
+                    </p>
+
+                </article>
+
+            </section>
+
+            <a href="#">[Ver historico de noticias]</a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer1">
+
+            TODO POR MARTÍN ❤️👶 &copy; 2025
+
+        </div>
+
+        <div class="footer2">
+
+            Más contenido y formación de desarrollo en <a href="https://victorroblesweb.es/academy" target="_blank">
+                victorroblesweb.es/academy</a>
+
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
