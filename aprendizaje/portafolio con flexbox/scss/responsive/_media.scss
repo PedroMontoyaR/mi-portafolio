@@ -1,0 +1,177 @@
+@use '../base/variables';
+@use "../base/mixins";
+
+
+// Tablet
+
+@media (min-width: 768px) {
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
+
+    .projects__project {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .sidebar__list {
+        width: 40%;
+    }
+
+}
+
+
+// laptop
+
+@media (min-width: 1024px) {
+    .header {
+        height: 6.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5rem;
+        text-align: left;
+    }
+
+    .header__logo {
+        flex-basis: 50%;
+        flex-grow: 1;
+        font-size: 1.5625rem;
+        margin-left: 1rem;
+    }
+
+    .header__nav {
+        flex-basis: 50%;
+        flex-grow: 1;
+        margin-top: 0;
+    }
+
+    .header__list {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-right: 0.1875rem;
+        font-size: 0.8125rem;
+    }
+
+    .main {
+        flex-direction: row;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .sidebar {
+        order: -1;
+        width: 20%;
+        margin: 0;
+    }
+
+    .sidebar__title {
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 16rem;
+
+    }
+
+    .sidebar__list {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .sidebar__link {
+        font-size: 0.8125rem;
+    }
+
+    .projects {
+        width: 80%;
+        border-bottom: none;
+        margin: 0;
+    }
+
+    .projects__project {
+        flex-basis: 25%;
+        flex-grow: 1;
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer {
+        height: 6.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+        text-align: left;
+        border-top: none;
+        padding: 0.625rem;
+
+        .footer__title {
+            width: 50%;
+            margin-top: 0;
+            font-size: 1.5625rem;
+            margin-left: 1rem;
+        }
+
+        .footer__credit {
+            width: 50%;
+            font-size: 0.8125rem;
+            margin-bottom: 0;
+            text-align: right;
+            font-weight: 500;
+        }
+    }
+}
+
+//Escritorio
+
+@media (min-width: 1200px) {
+    .header {
+        gap: 17rem;
+    }
+
+    .header__list {
+        justify-content: center;
+    }
+
+    .main {
+        gap: 0rem;
+    }
+
+    .sidebar__title {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .sidebar__list {
+        width: 90%;
+    }
+
+    .projects {
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+     .projects__project {
+        flex-basis: 23%;
+    }
+
+    .projects__link,
+    .projects__description {
+        font-size: 1rem;
+    }
+
+    .footer__credit {
+        margin-right: 0.8125rem;
+    }
+}
+
+
+// ESCRITORIO GRANDE
+
+@media (min-width: 1280px) {}
