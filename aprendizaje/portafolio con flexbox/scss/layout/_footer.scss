@@ -1,0 +1,19 @@
+@use '../base/variables';
+@use "../base/mixins";
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: variables.$border;
+  text-align: center; 
+  
+  &__title {
+    @include mixins.titulo-base(variables.$color-terciario);
+    margin-top: 2rem;
+  }
+
+  &__credit {
+    color: variables.$color-principal;
+  }
+}
