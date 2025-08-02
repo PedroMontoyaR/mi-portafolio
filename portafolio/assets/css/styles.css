@@ -113,7 +113,7 @@ h6 {
     position: relative;
     display: inline-block;
     width: 18rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     z-index: 1;
 }
 
@@ -156,8 +156,8 @@ h6 {
 }
 
 .social {
-    margin-top: 2rem;
-    margin-bottom: 3.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .social__list {
@@ -177,7 +177,14 @@ h6 {
     opacity: 1;
 }
 
+.info__footer {
+    margin-top: 2rem;
+}
 
+.info__dedicatory, 
+.info__copy {
+    font-size: 1.1rem;
+}
 
 
 /*MAIN*/
@@ -192,4 +199,13 @@ h6 {
     text-align: center;
     background-color: var(--color-main);
     border-radius: 4rem;
+}
+
+.page__name {
+    font-size: 5rem;
+}
+
+.page__title {
+    margin-top: 1.5rem;
+    color: var(--color-subtitle);
 }
