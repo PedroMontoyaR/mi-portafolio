@@ -1,0 +1,96 @@
+/*RESET GENERAL*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+
+/*LISTAS*/
+
+ul,
+ol {
+  list-style: none;
+}
+
+/*IMAGENES Y MULTIMEDIA*/
+
+img,
+video,
+iframe,
+picture,
+figure {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*ENLACES*/
+
+a {
+  display: block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p a {
+  display: inline;
+}
+
+/*FORMULARIOS*/
+
+input,
+button,
+textarea,
+select,
+label,
+form {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/*BOTONES*/
+
+button {
+  cursor: pointer;
+}
+
+/*SELECCION DE TEXTO*/
+
+::selection {
+  background-color: #37bcf9;
+  color: #fff;
+}
+
+
+/*OTROS*/
+
+[hidden] {
+  display: none !important;
+}

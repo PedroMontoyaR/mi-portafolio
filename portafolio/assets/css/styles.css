@@ -1,58 +1,40 @@
-/*RESET GENERAL*/
+/*VARIABLES*/
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+:root {
+    --color-main: #ffffff;
+    --color-secondary: #04B4E0;
 
-/*LISTAS*/
+    --color-background: #f2f2f9;
+    --color-transparent: transparent;
 
-ul,
-ol {
-    list-style: none;
-}
-
-/*IMAGENES Y MULTIMEDIA*/
-
-img,
-video {
-max-width: 100%;
-height: auto;
-display: block;
+    --color-icon: #B5B6B7;
+    --color-title: #222222;
+    --color-subtitle: #888;
+    --color-text: #555;
 }
 
 
-/*OTROS*/
-
-[hidden] {
-  display: none !important;
-}
-
-/*CONFIGURACION GENERAL*/
+/*ESTILOS GENERALES*/
 
 html {
-    font-size: 16px;
-    scroll-behavior: smooth;
+    font-size: 10px;
 }
 
 body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text);
+
+    background-color: var(--color-background);
     background-image: url("../img/fondo.png");
+    background-position: -30px -120px;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+
 }
 
-/*TITULOS*/
 
 h1 {
     font-size: clamp(1.5rem, 5vw, 2.25rem);
@@ -74,48 +56,140 @@ h4 {
     font-weight: bold;
 }
 
-/*ENLACES*/
-
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-title);
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
-button {
-    cursor: pointer;
-}
-
-/*SELECCION DE TEXTO*/
-
-::selection {
-    background-color: #37bcf9;
-    color: #fff;
-}
+/*LAYOUT*/
 
 .layout {
-    width: 80%;
-    min-width: 1200px;
-    height: auto;
-    margin: 4rem auto;
-    display: flex;
-    border: 1px solid gray;
-    border-radius: 50px;
-    box-shadow: 0 0 20px gray;
+    position: relative;
+    width: 75%;
+    min-width: 1290px;
+    height: 80%;
+    min-height: 80vh;
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-areas: "aside main";
+    grid-template-columns: 30% 70%;
+
+    border-radius: 4rem;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.25);
+
+    background-color: var(--color-secondary);
 }
+
+
+/*ASIDE*/
 
 .aside {
-    background-color: #04B4E0;
+    grid-area: aside;
+    border-radius: 4rem 0 0 4rem;
+    overflow: hidden;
 }
 
-.main {
+.info {
+    min-width: 30rem;
+    min-height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    background-color: var(--color-secondary);
+    color: var(--color-main);
+}
+
+.user__image {
+    position: relative;
+    display: inline-block;
+    width: 18rem;
+    margin-top: 7rem;
+    z-index: 1;
+}
+
+.user__userimg {
+    width: 100%;
+
+    background-color: var(--color-secondary);
+    border: 0.3rem solid var(--color-main);
+    border-radius: 20rem;
+}
+
+.user__image::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-radial-gradient(circle at center, #fff, #fff 1px, transparent 1px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 0.6;
+    border-radius: 20rem;
+}
+
+.user__name {
+    font-size: 3.2rem;
+    margin-top: 2.6rem;
+    color: var(--color-main);
+}
+
+.user__title {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--color-main);
+}
+
+.nav {
+    display: none
+}
+
+.social {
+    margin-top: 2rem;
+    margin-bottom: 3.6rem;
+}
+
+.social__list {
+    text-align: center;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social__item {
+    font-size: 2.5rem;
+    opacity: 0.9;
+    transition: all 0.3s;
+}
+
+.social__item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+
+
+
+/*MAIN*/
+
+.main {
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-main);
+    border-radius: 4rem;
 }
