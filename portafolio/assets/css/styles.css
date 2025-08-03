@@ -298,7 +298,166 @@ h6 {
     right: 100%;
 }
 
-
 .nav__link--active:hover .nav__text {
     opacity: 0;
+}
+
+
+/*PAGE SOBRE MI*/
+
+.page--about {
+    min-width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5rem;
+    text-align: justify;
+
+    border-radius: 4rem 0 0 4rem;
+
+    max-height: 557px;
+    /* Limita el alto */
+    overflow-y: auto;
+    /* Activa el scroll vertical */
+}
+
+.page--about::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.page--about::-webkit-scrollbar-track {
+    background: var(--color-transparent);
+
+}
+
+.page--about::-webkit-scrollbar-thumb {
+    background-color: var(--color-icon);
+}
+
+.about {
+    margin-bottom: 5rem;
+}
+
+.about__title {
+    font-size: 5rem;
+    color: var(--color-title);
+}
+
+.title__blue {
+    position: relative;
+    color: var(--color-secondary);
+    z-index: 1;
+}
+
+.title__blue::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    z-index: -1;
+    width: 110%;
+    height: 66%;
+    background-image: repeating-radial-gradient(circle at center, var(--color-secondary), var(--color-secondary) 1px, transparent 1px, transparent 100%);
+    background-size: 0.6rem 0.6rem;
+    opacity: 1;
+}
+
+.about__information {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-rows: auto auto;
+    gap: 4rem;
+}
+
+.about__description {
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.about__info {
+    text-align: start;
+}
+
+.about__item {
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.about__fact {
+    color: var(--color-text);
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+
+/*LO QUE HAGO*/
+
+.services__header,
+.tools__header {
+    margin-bottom: 2rem;
+}
+
+.services__title,
+.tools__title {
+    font-size: 3rem;
+    color: var(--color-title);
+}
+
+.services__area {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 4rem;
+}
+
+.services__icon {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.services__subtitle {
+    font-size: 2rem;
+    color: var(--color-subtitle);
+    margin-bottom: 1.5rem;
+}
+
+.services__description {
+    color: var(--color-text);
+    font-weight: 500;  
+}
+
+.icon__backend {
+    font-size: 5rem;
+}
+
+
+/*HERRAMIENTAS*/
+
+.about__tools {
+    margin-bottom: 4rem;
+}
+
+.tools__icon {
+    color: var(--color-secondary);
+}
+
+
+/*CLOSING*/
+.about__closing {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-text);
+    text-align: center;
 }
