@@ -309,7 +309,9 @@ h6 {
 
 /*PAGE SOBRE MI*/
 
-.page--about {
+.page--about,
+.page--studies,
+.page--portfolio {
     display: block;
     padding: 5rem;
     text-align: justify;
@@ -320,34 +322,40 @@ h6 {
     /* Activa el scroll vertical */
 }
 
-.page--about::-webkit-scrollbar {
+.page--about::-webkit-scrollbar,
+.page--studies::-webkit-scrollbar {
     width: 0.7rem;
 }
 
-.page--about::-webkit-scrollbar-track {
+.page--about::-webkit-scrollbar-track,
+.page--studies::-webkit-scrollbar-track {
     background: var(--color-transparent);
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
-.page--about::-webkit-scrollbar-thumb {
+.page--about::-webkit-scrollbar-thumb,
+.page--studies::-webkit-scrollbar-thumb {
     background-color: var(--color-transparent);
 }
 
-.page--about:hover::-webkit-scrollbar-thumb {
+.page--about:hover::-webkit-scrollbar-thumb,
+.page--studies:hover::-webkit-scrollbar-thumb {
     background-color: var(--color-icon);
 }
 
-.page--about:hover::-webkit-scrollbar-thumb:hover {
+.page--about:hover::-webkit-scrollbar-thumb:hover,
+.page--studies:hover::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-secondary);
 }
 
 .about {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
 }
 
-.about__title {
-    font-size: 5rem;
+.about__title,
+.studies__title {
+    font-size: 3rem;
 }
 
 .title__blue {
@@ -407,12 +415,15 @@ h6 {
 }
 
 .services__title,
-.tools__title {
-    font-size: 3rem;
+.tools__title,
+.studies__formation,
+.experiencie__title,
+.skills__title {
+    font-size: 2rem;
 }
 
 .services__area {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -424,13 +435,13 @@ h6 {
 }
 
 .services__icon {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-secondary);
     margin-bottom: 1rem;
 }
 
 .services__subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-subtitle);
     margin-bottom: 1.5rem;
 }
@@ -464,3 +475,49 @@ h6 {
     color: var(--color-text);
     text-align: center;
 }
+
+
+/*PAGE ESTUDIOS*/
+
+.page--studies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "studies studies"
+    "studies__container skills__container";
+    gap: 4rem;
+}
+
+.studies__title
+
+.skills__container {
+    align-self: start;
+}
+
+.studies {
+    grid-area: studies;
+}
+
+.studies__container {
+    grid-area: studies__container;
+}
+
+.studies__timeline,
+.studies__formation,
+.studies__area,
+.skills__title {
+    margin-bottom: 3rem;
+}
+
+.skills__area {
+    margin-bottom: 4rem;
+}
+
+
+
+.skills__container {
+    grid-area: skills__container;
+    align-self: flex-start;
+    text-align: start;
+}
+
