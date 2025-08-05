@@ -323,29 +323,34 @@ h6 {
 }
 
 .page--about::-webkit-scrollbar,
-.page--studies::-webkit-scrollbar {
+.page--studies::-webkit-scrollbar,
+.page--portfolio::-webkit-scrollbar {
     width: 0.7rem;
 }
 
 .page--about::-webkit-scrollbar-track,
-.page--studies::-webkit-scrollbar-track {
+.page--studies::-webkit-scrollbar-track,
+.page--portfolio::-webkit-scrollbar-track {
     background: var(--color-transparent);
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 
 .page--about::-webkit-scrollbar-thumb,
-.page--studies::-webkit-scrollbar-thumb {
+.page--studies::-webkit-scrollbar-thumb,
+.page--portfolio::-webkit-scrollbar-thumb {
     background-color: var(--color-transparent);
 }
 
 .page--about:hover::-webkit-scrollbar-thumb,
-.page--studies:hover::-webkit-scrollbar-thumb {
+.page--studies:hover::-webkit-scrollbar-thumb,
+.page--portfolio:hover::-webkit-scrollbar-thumb {
     background-color: var(--color-icon);
 }
 
 .page--about:hover::-webkit-scrollbar-thumb:hover,
-.page--studies:hover::-webkit-scrollbar-thumb:hover {
+.page--studies:hover::-webkit-scrollbar-thumb:hover,
+.page--portfolio:hover::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-secondary);
 }
 
@@ -354,7 +359,8 @@ h6 {
 }
 
 .about__title,
-.studies__title {
+.studies__title,
+.portfolio__title {
     font-size: 3rem;
 }
 
@@ -410,13 +416,18 @@ h6 {
 /*LO QUE HAGO*/
 
 .services__header,
-.tools__header {
+.tools__header,
+.studies__header,
+.complementary__header,
+.experiencie__header,
+.skills__header {
     margin-bottom: 2rem;
 }
 
 .services__title,
 .tools__title,
 .studies__formation,
+.complementary__title,
 .experiencie__title,
 .skills__title {
     font-size: 2rem;
@@ -481,17 +492,11 @@ h6 {
 
 .page--studies {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.2fr 0.8fr;
     grid-template-rows: auto auto;
     grid-template-areas: "studies studies"
-    "studies__container skills__container";
+        "studies__container studies__skills";
     gap: 4rem;
-}
-
-.studies__title
-
-.skills__container {
-    align-self: start;
 }
 
 .studies {
@@ -502,22 +507,188 @@ h6 {
     grid-area: studies__container;
 }
 
-.studies__timeline,
-.studies__formation,
-.studies__area,
-.skills__title {
-    margin-bottom: 3rem;
-}
-
-.skills__area {
-    margin-bottom: 4rem;
-}
-
-
-
-.skills__container {
-    grid-area: skills__container;
+.studies__skills {
+    grid-area: studies__skills;
     align-self: flex-start;
     text-align: start;
 }
+
+.studies__timeline,
+.studies__area,
+.complementary__area,
+.skills__desing {
+    margin-bottom: 3rem;
+}
+
+.studies__area,
+.complementary__area,
+.experiencie__area {
+    width: 100%;
+    display: flex;
+}
+
+.studies__timeline {
+    position: relative;
+}
+
+.studies__timeline::before {
+    content: "";
+    position: absolute;
+    left: 23.5%;
+    top: 55px;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 92%;
+    background-color: lightgrey;
+}
+
+.studies__complementary {
+    position: relative;
+}
+
+.studies__complementary::before {
+    content: "";
+    position: absolute;
+    left: 16.5%;
+    top: 55px;
+    transform: translateX(-50%);
+    width: 0.9px;
+    height: 83%;
+    background-color: lightgrey;
+}
+
+.studies__expereiencie {
+    position: relative;
+}
+
+.studies__expereiencie::before {
+    content: "";
+    position: absolute;
+    left: 21.5%;
+    top: 55px;
+    transform: translateX(-50%);
+    width: 0.9px;
+    height: 45%;
+    background-color: lightgrey;
+}
+
+.studies__line { 
+    position: relative;
+    padding-left: 2rem;
+}
+
+.studies__line::before {
+    content: "";
+    position: absolute;
+    left: -15%;
+    top: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 0.4;
+}
+
+.studies__line::after {
+    content: "";
+    position: absolute;
+    left: -4.8%;
+    top: 6.5px;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--color-main);
+    border: 2px solid var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 1;
+}
+
+
+.complementary__line { 
+    position: relative;
+    padding-left: 2rem;
+}
+
+.complementary__line::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 0.4;
+}
+
+.complementary__line::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 7px;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--color-main);
+    border: 2px solid var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 1;
+}
+
+
+.experiencie__line { 
+    position: relative;
+    padding-left: 2rem;
+}
+
+.experiencie__line::before {
+    content: "";
+    position: absolute;
+    left: -8%;
+    top: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 0.4;
+}
+
+.experiencie__line::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    top: 6.5px;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--color-main);
+    border: 2px solid var(--color-secondary);
+    border-radius: 100rem;
+    opacity: 1;
+}
+
+.studies__information,
+.complementary__information,
+.experiencie__information {
+    margin-right: 1rem;
+}
+
+.studies__degree {
+    margin-bottom: 2rem;
+}
+
+.studies__year,
+.complementary__year,
+.experiencie__year,
+.studies__institution,
+.complementary__institution,
+.experiencie__company {
+    display: block;
+    text-align: right;
+}
+
+.studies__institution,
+.complementary__institution,
+.experiencie__company {
+    color: var(--color-subtitle);
+}
+
+
 
