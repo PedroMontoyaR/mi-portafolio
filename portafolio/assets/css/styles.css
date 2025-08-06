@@ -311,7 +311,8 @@ h6 {
 
 .page--about,
 .page--studies,
-.page--portfolio {
+.page--portfolio,
+.page--contacto {
     display: block;
     padding: 5rem;
     text-align: justify;
@@ -420,7 +421,8 @@ h6 {
 .studies__header,
 .complementary__header,
 .experiencie__header,
-.skills__header {
+.skills__header,
+.aprendizaje__header {
     margin-bottom: 2rem;
 }
 
@@ -429,7 +431,8 @@ h6 {
 .studies__formation,
 .complementary__title,
 .experiencie__title,
-.skills__title {
+.skills__title,
+.aprendizaje__title {
     font-size: 2rem;
 }
 
@@ -710,10 +713,11 @@ h6 {
 
     margin-bottom: 1rem;
 }
+
 .skills__percentage {
     width: 100%;
     height: 0.8rem;
-    
+
     background-color: var(--color-secondary);
     border: 2px solid var(--color-main);
     border-radius: 1rem;
@@ -733,4 +737,60 @@ h6 {
 
 .skills__percentage--htmlcss {
     width: 80%;
+}
+
+
+/*PAGE PROYECTOS*/
+
+.portfolio {
+    margin-bottom: 3rem;
+}
+
+.aprendizaje__projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.aprendizaje__project {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 2px solid var(--color-secondary);
+
+    margin-bottom: 3rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.aprendizaje__project:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-secondary);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.aprendizaje__img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+.aprendizaje__info {
+    padding: 1rem;
+}
+
+.aprendizaje__link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.aprendizaje__project:hover .aprendizaje__info,
+.aprendizaje__project:hover .aprendizaje__link {
+   color: var(--color-main);
 }
