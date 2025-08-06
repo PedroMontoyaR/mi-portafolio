@@ -422,7 +422,9 @@ h6 {
 .complementary__header,
 .experiencie__header,
 .skills__header,
-.aprendizaje__header {
+.aprendizaje__header,
+.personal__header,
+.profesional__header {
     margin-bottom: 2rem;
 }
 
@@ -432,7 +434,9 @@ h6 {
 .complementary__title,
 .experiencie__title,
 .skills__title,
-.aprendizaje__title {
+.aprendizaje__title,
+.personal__title,
+.profesional__title {
     font-size: 2rem;
 }
 
@@ -746,14 +750,18 @@ h6 {
     margin-bottom: 3rem;
 }
 
-.aprendizaje__projects {
+.aprendizaje__projects,
+.personal__projects,
+.profesional__projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
 
-.aprendizaje__project {
+.aprendizaje__project,
+.personal__project,
+.profesional__project {
     width: 90%;
 
     display: flex;
@@ -764,33 +772,52 @@ h6 {
 
     margin-bottom: 3rem;
 
+    overflow: hidden;
+
     transition: all 0.3s ease-in-out;
 }
 
-.aprendizaje__project:hover {
+.aprendizaje__project:hover,
+.personal__project:hover,
+.profesional__project:hover  {
     transform: translateY(-5px);
     background-color: var(--color-secondary);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.aprendizaje__img {
+.aprendizaje__img,
+.personal__img,
+.profesional__img {
     width: 100%;
     height: auto;
 
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
 }
 
-.aprendizaje__info {
+.aprendizaje__info,
+.personal__info,
+.profesional__info {
     padding: 1rem;
 }
 
-.aprendizaje__link {
+.aprendizaje__link,
+.personal__link,
+.profesional__link {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-secondary);
 }
 
 .aprendizaje__project:hover .aprendizaje__info,
-.aprendizaje__project:hover .aprendizaje__link {
+.aprendizaje__project:hover .aprendizaje__link,
+.personal__project:hover .personal__info,
+.personal__project:hover .personal__link,
+.profesional__project:hover .profesional__info,
+.profesional__project:hover .profesional__link {
    color: var(--color-main);
 }
+
+/*.aprendizaje__project:hover .aprendizaje__img {
+    transform: scale(1.1);
+}*/
