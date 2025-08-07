@@ -361,7 +361,8 @@ h6 {
 
 .about__title,
 .studies__title,
-.portfolio__title {
+.portfolio__title,
+.contacto__title {
     font-size: 3rem;
 }
 
@@ -746,7 +747,8 @@ h6 {
 
 /*PAGE PROYECTOS*/
 
-.portfolio {
+.portfolio,
+.contacto {
     margin-bottom: 3rem;
 }
 
@@ -834,14 +836,14 @@ h6 {
   align-items: center;
   gap: 2rem;
 
-  padding: 5rem;
+  padding: 3rem;
   margin-top: 2.5rem;
 }
 
-.contacto__ubication,
-.contacto__tel,
-.contacto__mail,
-.contacto__work {
+.contact__ubication,
+.contact__tel,
+.contact__mail,
+.contact__work {
     width: 85%;
     height: 100%;
 
@@ -855,22 +857,22 @@ h6 {
     transition: all 0.3s ease-in-out;
 }
 
-.contacto__ubication:hover,
-.contacto__tel:hover,
-.contacto__mail:hover,
-.contacto__work:hover {
+.contact__ubication:hover,
+.contact__tel:hover,
+.contact__mail:hover,
+.contact__work:hover {
     border: 2px solid var(--color-secondary);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.contacto__icon {
+.contact__icon {
     font-size: 3.5rem;
     color: var(--color-secondary);
     margin-bottom: 1.5rem;
 }
 
-.contacto__ubication,
-.contacto__mail {
+.contact__ubication,
+.contact__mail {
     margin-left: 5rem;
 }
 
