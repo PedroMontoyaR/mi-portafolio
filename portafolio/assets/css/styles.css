@@ -537,16 +537,17 @@ h6 {
 
 .studies__timeline {
     position: relative;
+    overflow: hidden;
 }
 
 .studies__timeline::before {
     content: "";
     position: absolute;
-    left: 23.5%;
+    left: 98px;
     top: 55px;
     transform: translateX(-50%);
-    width: 1px;
-    height: 92%;
+    width: 0.5px;
+    height: 2000px;
     background-color: lightgrey;
 }
 
@@ -557,11 +558,11 @@ h6 {
 .studies__complementary::before {
     content: "";
     position: absolute;
-    left: 16.5%;
+    left: 68px;
     top: 55px;
     transform: translateX(-50%);
     width: 0.9px;
-    height: 83%;
+    height: 280px;
     background-color: lightgrey;
 }
 
@@ -572,11 +573,11 @@ h6 {
 .studies__expereiencie::before {
     content: "";
     position: absolute;
-    left: 21.5%;
+    left: 89.5px;
     top: 55px;
     transform: translateX(-50%);
     width: 0.9px;
-    height: 45%;
+    height: 50px;
     background-color: lightgrey;
 }
 
@@ -662,7 +663,7 @@ h6 {
 .experiencie__line::after {
     content: "";
     position: absolute;
-    left: -2%;
+    left: 0%;
     top: 6.5px;
     width: 0.8rem;
     height: 0.8rem;
@@ -853,6 +854,7 @@ h6 {
     align-items: center;
 
     border: 1px solid lightgrey;
+    background-color: #fafafa;
 
     transition: all 0.3s ease-in-out;
 }

@@ -1,0 +1,28 @@
+@media (1200px <=width <=1440px) {
+    .layout {
+        min-width: auto;
+    }
+
+    
+}
+
+@media (width <= 1200px) {
+    .layout {
+        min-width: auto;
+    } 
+}
+
+
+@media (max-width <= 1023px) {
+    .layout {
+        min-width: auto;
+    }
+
+}
+
+
+@media (max-width <= 768px) {
+    .layout {
+        min-width: auto;
+    }
+}
