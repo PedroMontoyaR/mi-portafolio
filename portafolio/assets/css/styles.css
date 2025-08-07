@@ -768,7 +768,7 @@ h6 {
     justify-content: center;
     flex-direction: column;
 
-    border: 2px solid var(--color-secondary);
+    border: 2px solid lightgrey;
 
     margin-bottom: 3rem;
 
@@ -781,7 +781,8 @@ h6 {
 .personal__project:hover,
 .profesional__project:hover  {
     transform: translateY(-5px);
-    background-color: var(--color-secondary);
+    background: linear-gradient(to bottom, var(--color-secondary), rgba(95, 182, 232, 0.744));
+    border: 2px solid var(--color-secondary);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
