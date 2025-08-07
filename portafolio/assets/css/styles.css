@@ -824,3 +824,62 @@ h6 {
 
 
 /*PAGE CONTACTO*/
+
+.contacto__contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 15rem);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 5rem;
+  margin-top: 2.5rem;
+}
+
+.contacto__ubication,
+.contacto__tel,
+.contacto__mail,
+.contacto__work {
+    width: 85%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid lightgrey;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.contacto__ubication:hover,
+.contacto__tel:hover,
+.contacto__mail:hover,
+.contacto__work:hover {
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.contacto__icon {
+    font-size: 3.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.contacto__ubication,
+.contacto__mail {
+    margin-left: 5rem;
+}
+
+.contact__title {
+    font-size: 1.4rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__title:hover{
+    transform: scale(1.1);
+}
+
+
