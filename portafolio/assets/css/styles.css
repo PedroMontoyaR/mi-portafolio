@@ -92,6 +92,11 @@ h6 {
 .aside {
     grid-area: aside;
     border-radius: 4rem 0 0 4rem;
+
+    padding: 1rem;
+
+    background-color: var(--color-secondary);
+
 }
 
 .info {
@@ -104,7 +109,6 @@ h6 {
     align-items: center;
     text-align: center;
 
-    background-color: var(--color-secondary);
     color: var(--color-main);
     border-radius: 4rem 0 0 4rem;
 }
@@ -153,7 +157,6 @@ h6 {
 
 .social {
     margin-top: 5rem;
-
 }
 
 .social__list {
@@ -782,7 +785,7 @@ h6 {
 
 .aprendizaje__project:hover,
 .personal__project:hover,
-.profesional__project:hover  {
+.profesional__project:hover {
     transform: translateY(-5px);
     background: linear-gradient(to bottom, var(--color-secondary), rgba(95, 182, 232, 0.744));
     border: 2px solid var(--color-secondary);
@@ -819,7 +822,7 @@ h6 {
 .personal__project:hover .personal__link,
 .profesional__project:hover .profesional__info,
 .profesional__project:hover .profesional__link {
-   color: var(--color-main);
+    color: var(--color-main);
 }
 
 /*.aprendizaje__project:hover .aprendizaje__img {
@@ -830,15 +833,12 @@ h6 {
 /*PAGE CONTACTO*/
 
 .contacto__contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 15rem);
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  padding: 3rem;
-  margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 15rem);
+    gap: 2rem;
+    padding: 3rem;
+    margin-top: 2.5rem;
 }
 
 .contact__ubication,
@@ -883,8 +883,6 @@ h6 {
     transition: all 0.3s ease-in-out;
 }
 
-.contact__title:hover{
+.contact__title:hover {
     transform: scale(1.1);
 }
-
-

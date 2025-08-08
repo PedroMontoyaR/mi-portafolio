@@ -1,27 +1,266 @@
-@media (1200px <=width <=1440px) {
+/*MEDIA QUERIES*/
+
+.layout__menu--toggle {
+    display: none;
+}
+
+/*1440px*/
+
+@media (width <=1440px) {
     .layout {
         min-width: auto;
     }
 
-    
-}
+    .contact__ubication,
+    .contact__tel,
+    .contact__mail,
+    .contact__work {
+        width: 100%;
+        padding: 1rem;
+    }
 
-@media (width <= 1200px) {
-    .layout {
-        min-width: auto;
-    } 
-}
-
-
-@media (max-width <= 1023px) {
-    .layout {
-        min-width: auto;
+    .contact__ubication,
+    .contact__mail {
+        margin-left: 0;
     }
 
 }
 
 
-@media (max-width <= 768px) {
+/*1300px*/
+
+@media (width <=1300px) {
+
+    .contact__ubication,
+    .contact__tel,
+    .contact__mail,
+    .contact__work {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+
+/*1200px*/
+
+@media (width <=1200px) {
+    .layout {
+        min-width: auto;
+    }
+
+    .social {
+        margin-top: 2rem;
+    }
+
+    .studies__degree,
+    .complementary__degree {
+        text-align: left;
+    }
+
+    .page--contacto {
+        padding: 2.5rem;
+    }
+
+    .contacto {
+        margin-bottom: 0;
+    }
+
+    .contacto__contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+        padding: 1.7rem;
+        margin-top: 0;
+    }
+
+    .contact__ubication,
+    .contact__mail {
+        margin-left: 0;
+    }
+
+    .contact__ubication,
+    .contact__tel,
+    .contact__mail,
+    .contact__work {
+        width: 60%;
+        margin: 0 auto;
+        padding: 1.1rem;
+    }
+
+    .contact__icon {
+        font-size: 2.5rem;
+    }
+
+    .contact__title {
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        width: 5%;
+    }
+}
+
+
+/*1024px*/
+
+@media (width <=1024px) {
+    .layout {
+        min-width: auto;
+    }
+
+    .user__name {
+        font-size: 2.5rem;
+    }
+}
+
+
+/*992px*/
+
+@media (max-width: 992px) {
+    body {
+        background-image: none;
+        position: static;
+    }
+
+    .layout {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+    }
+
+    .main {
+        background-color: var(--color-transparent);
+        border-radius: 0;
+    }
+
+    .page {
+        border-radius: 0;
+    }
+
+    .user__title {
+        font-size: 1.3rem;
+    }
+
+    .page__name {
+        font-size: 5rem;
+    }
+
+    .page__title {
+        font-size: 1.8rem;
+    }
+
+    .social {
+        margin-top: 4rem;
+    }
+
+    .info__footer {
+        font-size: 1rem;
+    }
+
+
+    .studies__perfil {
+        word-spacing: -0.1em;
+    }
+
+    .layout__menu--toggle {
+        width: 4.8rem;
+        height: 4.8rem;
+
+        font-size: 2.5rem;
+
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        line-height: 4.8rem;
+        text-align: center;
+
+        color: var(--color-main);
+
+        border-radius: 3rem;
+        background-color: var(--color-secondary);
+
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fa-xmark {
+        display: none;
+    }
+
+    .aside {
+        position: absolute;
+        right: 0;
+
+        border-radius: 0;
+    }
+
+    .nav {
+        position: static;
+        top: 0;
+        right: -65px;
+
+        width: 100%;
+        height: 55%;
+
+        display: block;
+
+        background-color: var(--color-transparent);
+    }
+
+    .nav__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    background-color: var(--color-secondary);
+
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.nav__icon {
+    display: none;
+}
+.nav__text {
+    position: static;
+    right: 0;
+    margin-top: -0.4rem;
+
+    visibility: visible;
+    padding: 0.3rem 1rem;
+
+    font-size: 1.5rem;
+    background-color: var(--color-secondary);
+    border-radius: 0;
+    color: var(--color-main);
+    opacity: 1;
+}
+}
+
+
+/*768px*/
+
+@media (width <=768px) {
+
+    body {
+        background-image: none;
+        position: static;
+
+    }
+
     .layout {
         min-width: auto;
     }
