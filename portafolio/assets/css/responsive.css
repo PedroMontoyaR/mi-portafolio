@@ -1,8 +1,5 @@
 /*MEDIA QUERIES*/
 
-.layout__menu--toggle {
-    display: none;
-}
 
 /*1440px*/
 
@@ -120,7 +117,7 @@
 @media (max-width: 992px) {
     body {
         background-image: none;
-        position: static;
+        overflow: hidden;
     }
 
     .layout {
@@ -131,6 +128,8 @@
 
         grid-template-columns: 1fr;
         grid-template-areas: "main";
+
+        box-shadow: none;
     }
 
     .main {
@@ -168,10 +167,6 @@
 
     .info__footer {
         font-size: 1rem;
-    }
-
-    .studies__perfil {
-        word-spacing: -0.1em;
     }
 
     .layout__menu-toggle {
@@ -218,10 +213,11 @@
     }
 
     .aside {
-        height: 100%;
-
         position: absolute;
+        display: none;
+        height: 100%;
         right: 0;
+        
 
         border-radius: 0;
 
@@ -229,11 +225,12 @@
 
         z-index: 2;
 
-        margin-right: -100%;
+        
         opacity: 0;
     }
 
     .aside-visible {
+        display: block;
         margin-right: 0;
         opacity: 1;
     }
@@ -305,10 +302,10 @@
         min-width: auto;
     }
 
-    .info__footer {
+   /* .info__footer {
         position: static;
         margin-top: 10rem;
         margin-bottom: 2rem;
 
-    }
+    }*/
 }

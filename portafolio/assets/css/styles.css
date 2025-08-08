@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-family: "Poppins", Helvetica, sans-serif;
     font-size: 1.5rem;
@@ -34,7 +34,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -182,6 +182,10 @@ h6 {
     font-size: 1.2rem;
 }
 
+
+.layout__menu-toggle {
+        display: none;
+    }
 
 /*MAIN*/
 
