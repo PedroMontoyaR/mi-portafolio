@@ -137,11 +137,7 @@
     }
 
     .user__image {
-        position: relative;
-        display: inline-block;
         width: 15rem;
-        margin-top: -2rem;
-        z-index: 1;
     }
 
     .page {
@@ -284,6 +280,11 @@
         transform: none;
         text-decoration: none;
     }
+
+     .contacto__contact {
+        margin-top: 10rem;
+    }
+
 }
 
 
@@ -303,18 +304,25 @@
     }
 
     .page--studies {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "studies"
             "studies__container"
             "studies__skills";
-        gap: 4rem;
     }
 
-    /* .info__footer {
-        position: static;
-        margin-top: 10rem;
-        margin-bottom: 2rem;
+    .contact__ubication,
+    .contact__tel,
+    .contact__mail,
+    .contact__work {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.1rem;
+    }
+}
 
-    }*/
+@media (width <=480px) {
+    .contacto__contact {
+
+        margin-top: 8rem;
+    }
 }
