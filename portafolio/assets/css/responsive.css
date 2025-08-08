@@ -281,7 +281,7 @@
         text-decoration: none;
     }
 
-     .contacto__contact {
+    .contacto__contact {
         margin-top: 10rem;
     }
 
@@ -321,6 +321,14 @@
 }
 
 @media (width <=480px) {
+    .studies__line::before {
+        left: 2.9px;
+    }
+
+    .studies__line::after {
+        left: 5px;
+    }
+
     .contacto__contact {
 
         margin-top: 8rem;
