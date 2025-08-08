@@ -1,25 +1,35 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    let button = document.querySelector(".layout__menu-toggle");
-    let icon_bars = document.querySelector(".layout__menu-toggle .fa-bars");
-    let icon_xmark = document.querySelector(".layout__menu-toggle .fa-xmark");
-    let aside = document.querySelector(".aside");
+    const button = document.querySelector(".layout__menu-toggle");
+    const icon_bars = document.querySelector(".layout__menu-toggle .fa-bars");
+    const icon_xmark = document.querySelector(".layout__menu-toggle .fa-xmark");
+    const aside = document.querySelector(".aside");
+
+    function openAside() {
+        aside.classList.add("aside-visible");
+        icon_bars.classList.add("icon--hidden");
+        icon_xmark.classList.remove("icon--hidden");
+    }
+
+    function closeAside() {
+        aside.classList.remove("aside-visible");
+        icon_bars.classList.remove("icon--hidden");
+        icon_xmark.classList.add("icon--hidden");
+    }
 
     button.addEventListener("click", () => {
-
-        if (!aside.classList.contains("aside-visible")) {
-
-            aside.classList.add("aside-visible");
-
-            icon_bars.style.opacity = 0;
-            icon_xmark.style.opacity = 1;
-
-        }else {
-            aside.classList.remove("aside-visible");
-
-            icon_bars.style.opacity = 1;
-            icon_xmark.style.opacity = 0;
+        if (aside.classList.contains("aside-visible")) {
+            closeAside();
+        } else {
+            openAside();
         }
+    });
 
-    })
-})
+    const mediaQuery = window.matchMedia("(max-width: 962px)");
+    mediaQuery.addEventListener("change", e => {
+        if (e.matches) closeAside();
+    });
+
+    // Ejecutar al cargar
+    if (mediaQuery.matches) closeAside();
+});

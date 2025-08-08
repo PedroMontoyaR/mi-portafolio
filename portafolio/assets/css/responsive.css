@@ -199,12 +199,15 @@
         transition: all 0.3s ease-in-out;
     }
 
-    .fa-bars {
+    .fa-bars,
+    .fa-xmark {
         opacity: 1;
     }
 
-    .fa-xmark {
+    .icon--hidden {
         opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
     }
 
     .aside {
