@@ -335,4 +335,11 @@
     .contacto__contact {
         margin-top: 8rem;
     }
+
+     .contact__ubication,
+    .contact__tel,
+    .contact__mail,
+    .contact__work {
+       width: 100%;
+    }
 }
